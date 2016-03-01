@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  
+  <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/canvasjs.min.js'></script>
+  <style type='text/css'>
+  </style>
+
+	<script type="text/javascript">
+
+
+var day = new Date; 
+var oneday = 1000 * 60 * 60 * 24*1; 
+var diff = day - oneday;
+var oneday_Date = new Date(diff);
+var oneday_String = oneday_Date.getFullYear() + '-' + (oneday_Date.getMonth() + 1) + '-' + oneday_Date.getDate();	
+	
+var twoday = 1000 * 60 * 60 * 24*2; 
+var diff = day - twoday;
+var twoday_Date = new Date(diff);
+var twoday_String = twoday_Date.getFullYear() + '-' + (twoday_Date.getMonth() + 1) + '-' + twoday_Date.getDate();	
+	
+var threday = 1000 * 60 * 60 * 24*3; 
+var diff = day - threday;
+var threday_Date = new Date(diff);
+var threday_String = threday_Date.getFullYear() + '-' + (threday_Date.getMonth() + 1) + '-' + threday_Date.getDate();	
+	
+var fourday = 1000 * 60 * 60 * 24*4; 
+var diff = day - fourday;
+var fourday_Date = new Date(diff);
+var fourday_String = fourday_Date.getFullYear() + '-' + (fourday_Date.getMonth() + 1) + '-' + fourday_Date.getDate();	
+	
+var fiveday = 1000 * 60 * 60 * 24*5; 
+var diff = day - fiveday;
+var fiveday_Date = new Date(diff);
+var fiveday_String = fiveday_Date.getFullYear() + '-' + (fiveday_Date.getMonth() + 1) + '-' + fiveday_Date.getDate();	
+	
+var sixday = 1000 * 60 * 60 * 24*6; 
+var diff = day - sixday;
+var sixday_Date = new Date(diff);
+var sixday_String = sixday_Date.getFullYear() + '-' + (sixday_Date.getMonth() + 1) + '-' + sixday_Date.getDate();	
+	
+var sevenday = 1000 * 60 * 60 * 24*7; 
+var diff = day - sevenday;
+var sevenday_Date = new Date(diff);
+var sevenday_String = sevenday_Date.getFullYear() + '-' + (sevenday_Date.getMonth() + 1) + '-' + sevenday_Date.getDate();	
+	
+	window.onload = function () {
+		var chart_1 = new CanvasJS.Chart("shahril1",
+		{
+			zoomEnabled: false,
+                        animationEnabled: true,
+			title:{
+				text: "DB CONNECTION FOR DB1 FOR "+oneday_String +" "
+			},
+                        theme: "theme2",
+                        toolTip:{
+                                shared: true
+                        },
+			legend:{
+				verticalAlign: "bottom",
+				horizontalAlign: "center",
+				fontSize: 10,
+				fontFamily: "Lucida Sans Unicode"
+
+			},
+			axisX:{
+				title: "CONNECTION",
+				labelFontSize: 9,
+				//valueFormatString: "YYYY-MM-DD HH:mm:ss",
+			},
+			axisY: {
+				title: "COUNT",
+				interval: 1000,
+				labelFontSize: 9,
+				interlacedColor: "#F5F5F5",
+				gridColor: "#D7D7D7",      
+	 			tickColor: "#D7D7D7"
+			},
+			data: [
+			{        
+				type: "column",
+				lineThickness:1,
+				showInLegend: true,           
+				name: "CONNECTION",   
+				xValueType: "dateTime",				
+				//axisYType:"secondary",
+				dataPoints: [
+				
+{ label: "Scott-.local", y: 841 },
+{ label: "WORKGROUP\CELCOMPLANET", y: 6 },
+{ label: "WORKGROUP\MONITORING_PC", y: 182 },
+{ label: "WORKGROUP\UF-KENOVAN", y: 1 },
+{ label: "jdbcclient", y: 20 },
+{ label: "mydb", y: 20194 },
+{ label: "myidx", y: 3531 },
+{ label: "others", y: 22 },
+{ label: "vdevvalws", y: 23 },
+{ label: "vmyadminws", y: 102 },
+{ label: "vmyapiws", y: 25085 },
+{ label: "vmymows", y: 15641 },
+{ label: "vmynetpion.street.my", y: 673 },
+{ label: "vmypayws", y: 118 },
+{ label: "vmypushmsg", y: 2536 },
+{ label: "vmysows", y: 5100 },
+{ label: "webmadeup", y: 649 },
+
+				]
+			}			
+
+			
+			],
+          legend: {
+            cursor:"pointer",
+            itemclick : function(e) {
+              if (typeof(e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+              e.dataSeries.visible = false;
+              }
+              else {
+                e.dataSeries.visible = true;
+              }
+              chart.render();
+            }
+          }
+        });
+
+		var chart_2 = new CanvasJS.Chart("shahril2",
+		{
+			zoomEnabled: false,
+                        animationEnabled: true,
+			title:{
+				text: "DB CONNECTION FOR DB1 FOR "+twoday_String +" "
+			},
+                        theme: "theme2",
+                        toolTip:{
+                                shared: true
+                        },
+			legend:{
+				verticalAlign: "bottom",
+				horizontalAlign: "center",
+				fontSize: 10,
+				fontFamily: "Lucida Sans Unicode"
+
+			},
+			axisX:{
+				title: "CONNECTION",
+				labelFontSize: 9,
+				//valueFormatString: "YYYY-MM-DD HH:mm:ss",
+			},
+			axisY: {
+				title: "COUNT",
+				interval: 1000,
+				labelFontSize: 9,
+				interlacedColor: "#F5F5F5",
+				gridColor: "#D7D7D7",      
+	 			tickColor: "#D7D7D7"
+			},
+			data: [
+			{        
+				type: "column",
+				lineThickness:1,
+				showInLegend: true,           
+				name: "CONNECTION",   
+				xValueType: "dateTime",				
+				//axisYType:"secondary",
+				dataPoints: [
+				
+{ label: "Scott-.local", y: 841 },
+{ label: "WORKGROUP\CELCOMPLANET", y: 6 },
+{ label: "WORKGROUP\MONITORING_PC", y: 182 },
+{ label: "WORKGROUP\UF-KENOVAN", y: 1 },
+{ label: "jdbcclient", y: 20 },
+{ label: "mydb", y: 20194 },
+{ label: "myidx", y: 3531 },
+{ label: "others", y: 22 },
+{ label: "vdevvalws", y: 23 },
+{ label: "vmyadminws", y: 102 },
+{ label: "vmyapiws", y: 25085 },
+{ label: "vmymows", y: 15641 },
+{ label: "vmynetpion.street.my", y: 673 },
+{ label: "vmypayws", y: 118 },
+{ label: "vmypushmsg", y: 2536 },
+{ label: "vmysows", y: 5100 },
+{ label: "webmadeup", y: 649 },
+
+				]
+			}			
+
+			
+			],
+          legend: {
+            cursor:"pointer",
+            itemclick : function(e) {
+              if (typeof(e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+              e.dataSeries.visible = false;
+              }
+              else {
+                e.dataSeries.visible = true;
+              }
+              chart.render();
+            }
+          }
+        });		
+
+		var chart_3 = new CanvasJS.Chart("shahril3",
+		{
+			zoomEnabled: false,
+                        animationEnabled: true,
+			title:{
+				text: "DB CONNECTION FOR DB1 FOR "+threday_String +" "
+			},
+                        theme: "theme2",
+                        toolTip:{
+                                shared: true
+                        },
+			legend:{
+				verticalAlign: "bottom",
+				horizontalAlign: "center",
+				fontSize: 10,
+				fontFamily: "Lucida Sans Unicode"
+
+			},
+			axisX:{
+				title: "CONNECTION",
+				labelFontSize: 9,
+				//valueFormatString: "YYYY-MM-DD HH:mm:ss",
+			},
+			axisY: {
+				title: "COUNT",
+				interval: 1000,
+				labelFontSize: 9,
+				interlacedColor: "#F5F5F5",
+				gridColor: "#D7D7D7",      
+	 			tickColor: "#D7D7D7"
+			},
+			data: [
+			{        
+				type: "column",
+				lineThickness:1,
+				showInLegend: true,           
+				name: "CONNECTION",   
+				xValueType: "dateTime",				
+				//axisYType:"secondary",
+				dataPoints: [
+				
+{ label: "Scott-.local", y: 841 },
+{ label: "WORKGROUP\CELCOMPLANET", y: 6 },
+{ label: "WORKGROUP\MONITORING_PC", y: 182 },
+{ label: "WORKGROUP\UF-KENOVAN", y: 1 },
+{ label: "jdbcclient", y: 20 },
+{ label: "mydb", y: 20194 },
+{ label: "myidx", y: 3531 },
+{ label: "others", y: 22 },
+{ label: "vdevvalws", y: 23 },
+{ label: "vmyadminws", y: 102 },
+{ label: "vmyapiws", y: 25085 },
+{ label: "vmymows", y: 15641 },
+{ label: "vmynetpion.street.my", y: 673 },
+{ label: "vmypayws", y: 118 },
+{ label: "vmypushmsg", y: 2536 },
+{ label: "vmysows", y: 5100 },
+{ label: "webmadeup", y: 649 },
+
+				]
+			}			
+
+			
+			],
+          legend: {
+            cursor:"pointer",
+            itemclick : function(e) {
+              if (typeof(e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+              e.dataSeries.visible = false;
+              }
+              else {
+                e.dataSeries.visible = true;
+              }
+              chart.render();
+            }
+          }
+        });		
+		
+		var chart_4 = new CanvasJS.Chart("shahril4",
+		{
+			zoomEnabled: false,
+                        animationEnabled: true,
+			title:{
+				text: "DB CONNECTION FOR DB1 FOR "+fourday_String +" "
+			},
+                        theme: "theme2",
+                        toolTip:{
+                                shared: true
+                        },
+			legend:{
+				verticalAlign: "bottom",
+				horizontalAlign: "center",
+				fontSize: 10,
+				fontFamily: "Lucida Sans Unicode"
+
+			},
+			axisX:{
+				title: "CONNECTION",
+				labelFontSize: 9,
+				//valueFormatString: "YYYY-MM-DD HH:mm:ss",
+			},
+			axisY: {
+				title: "COUNT",
+				interval: 1000,
+				labelFontSize: 9,
+				interlacedColor: "#F5F5F5",
+				gridColor: "#D7D7D7",      
+	 			tickColor: "#D7D7D7"
+			},
+			data: [
+			{        
+				type: "column",
+				lineThickness:1,
+				showInLegend: true,           
+				name: "CONNECTION",   
+				xValueType: "dateTime",				
+				//axisYType:"secondary",
+				dataPoints: [
+				
+{ label: "Scott-.local", y: 841 },
+{ label: "WORKGROUP\CELCOMPLANET", y: 6 },
+{ label: "WORKGROUP\MONITORING_PC", y: 182 },
+{ label: "WORKGROUP\UF-KENOVAN", y: 1 },
+{ label: "jdbcclient", y: 20 },
+{ label: "mydb", y: 20194 },
+{ label: "myidx", y: 3531 },
+{ label: "others", y: 22 },
+{ label: "vdevvalws", y: 23 },
+{ label: "vmyadminws", y: 102 },
+{ label: "vmyapiws", y: 25085 },
+{ label: "vmymows", y: 15641 },
+{ label: "vmynetpion.street.my", y: 673 },
+{ label: "vmypayws", y: 118 },
+{ label: "vmypushmsg", y: 2536 },
+{ label: "vmysows", y: 5100 },
+{ label: "webmadeup", y: 649 },
+
+				]
+			}			
+
+			
+			],
+          legend: {
+            cursor:"pointer",
+            itemclick : function(e) {
+              if (typeof(e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+              e.dataSeries.visible = false;
+              }
+              else {
+                e.dataSeries.visible = true;
+              }
+              chart.render();
+            }
+          }
+        });		
+
+		var chart_5 = new CanvasJS.Chart("shahril5",
+		{
+			zoomEnabled: false,
+                        animationEnabled: true,
+			title:{
+				text: "DB CONNECTION FOR DB1 FOR "+fiveday_String +" "
+			},
+                        theme: "theme2",
+                        toolTip:{
+                                shared: true
+                        },
+			legend:{
+				verticalAlign: "bottom",
+				horizontalAlign: "center",
+				fontSize: 10,
+				fontFamily: "Lucida Sans Unicode"
+
+			},
+			axisX:{
+				title: "CONNECTION",
+				labelFontSize: 9,
+				//valueFormatString: "YYYY-MM-DD HH:mm:ss",
+			},
+			axisY: {
+				title: "COUNT",
+				interval: 1000,
+				labelFontSize: 9,
+				interlacedColor: "#F5F5F5",
+				gridColor: "#D7D7D7",      
+	 			tickColor: "#D7D7D7"
+			},
+			data: [
+			{        
+				type: "column",
+				lineThickness:1,
+				showInLegend: true,           
+				name: "CONNECTION",   
+				xValueType: "dateTime",				
+				//axisYType:"secondary",
+				dataPoints: [
+				
+{ label: "Scott-.local", y: 841 },
+{ label: "WORKGROUP\CELCOMPLANET", y: 6 },
+{ label: "WORKGROUP\MONITORING_PC", y: 182 },
+{ label: "WORKGROUP\UF-KENOVAN", y: 1 },
+{ label: "jdbcclient", y: 20 },
+{ label: "mydb", y: 20194 },
+{ label: "myidx", y: 3531 },
+{ label: "others", y: 22 },
+{ label: "vdevvalws", y: 23 },
+{ label: "vmyadminws", y: 102 },
+{ label: "vmyapiws", y: 25085 },
+{ label: "vmymows", y: 15641 },
+{ label: "vmynetpion.street.my", y: 673 },
+{ label: "vmypayws", y: 118 },
+{ label: "vmypushmsg", y: 2536 },
+{ label: "vmysows", y: 5100 },
+{ label: "webmadeup", y: 649 },
+
+				]
+			}			
+
+			
+			],
+          legend: {
+            cursor:"pointer",
+            itemclick : function(e) {
+              if (typeof(e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+              e.dataSeries.visible = false;
+              }
+              else {
+                e.dataSeries.visible = true;
+              }
+              chart.render();
+            }
+          }
+        });		
+
+		var chart_6 = new CanvasJS.Chart("shahril6",
+		{
+			zoomEnabled: false,
+                        animationEnabled: true,
+			title:{
+				text: "DB CONNECTION FOR DB1 FOR "+sixday_String +" "
+			},
+                        theme: "theme2",
+                        toolTip:{
+                                shared: true
+                        },
+			legend:{
+				verticalAlign: "bottom",
+				horizontalAlign: "center",
+				fontSize: 10,
+				fontFamily: "Lucida Sans Unicode"
+
+			},
+			axisX:{
+				title: "CONNECTION",
+				labelFontSize: 9,
+				//valueFormatString: "YYYY-MM-DD HH:mm:ss",
+			},
+			axisY: {
+				title: "COUNT",
+				interval: 1000,
+				labelFontSize: 9,
+				interlacedColor: "#F5F5F5",
+				gridColor: "#D7D7D7",      
+	 			tickColor: "#D7D7D7"
+			},
+			data: [
+			{        
+				type: "column",
+				lineThickness:1,
+				showInLegend: true,           
+				name: "CONNECTION",   
+				xValueType: "dateTime",				
+				//axisYType:"secondary",
+				dataPoints: [
+				
+{ label: "Scott-.local", y: 841 },
+{ label: "WORKGROUP\CELCOMPLANET", y: 6 },
+{ label: "WORKGROUP\MONITORING_PC", y: 182 },
+{ label: "WORKGROUP\UF-KENOVAN", y: 1 },
+{ label: "jdbcclient", y: 20 },
+{ label: "mydb", y: 20194 },
+{ label: "myidx", y: 3531 },
+{ label: "others", y: 22 },
+{ label: "vdevvalws", y: 23 },
+{ label: "vmyadminws", y: 102 },
+{ label: "vmyapiws", y: 25085 },
+{ label: "vmymows", y: 15641 },
+{ label: "vmynetpion.street.my", y: 673 },
+{ label: "vmypayws", y: 118 },
+{ label: "vmypushmsg", y: 2536 },
+{ label: "vmysows", y: 5100 },
+{ label: "webmadeup", y: 649 },
+
+				]
+			}			
+
+			
+			],
+          legend: {
+            cursor:"pointer",
+            itemclick : function(e) {
+              if (typeof(e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+              e.dataSeries.visible = false;
+              }
+              else {
+                e.dataSeries.visible = true;
+              }
+              chart.render();
+            }
+          }
+        });		
+
+		var chart_7 = new CanvasJS.Chart("shahril7",
+		{
+			zoomEnabled: false,
+                        animationEnabled: true,
+			title:{
+				text: "DB CONNECTION FOR DB1 FOR "+sevenday_String +" "
+			},
+                        theme: "theme2",
+                        toolTip:{
+                                shared: true
+                        },
+			legend:{
+				verticalAlign: "bottom",
+				horizontalAlign: "center",
+				fontSize: 10,
+				fontFamily: "Lucida Sans Unicode"
+
+			},
+			axisX:{
+				title: "CONNECTION",
+				labelFontSize: 9,
+				//valueFormatString: "YYYY-MM-DD HH:mm:ss",
+			},
+			axisY: {
+				title: "COUNT",
+				interval: 1000,
+				labelFontSize: 9,
+				interlacedColor: "#F5F5F5",
+				gridColor: "#D7D7D7",      
+	 			tickColor: "#D7D7D7"
+			},
+			data: [
+			{        
+				type: "column",
+				lineThickness:1,
+				showInLegend: true,           
+				name: "CONNECTION",   
+				xValueType: "dateTime",				
+				//axisYType:"secondary",
+				dataPoints: [
+				
+{ label: "Scott-.local", y: 841 },
+{ label: "WORKGROUP\CELCOMPLANET", y: 6 },
+{ label: "WORKGROUP\MONITORING_PC", y: 182 },
+{ label: "WORKGROUP\UF-KENOVAN", y: 1 },
+{ label: "jdbcclient", y: 20 },
+{ label: "mydb", y: 20194 },
+{ label: "myidx", y: 3531 },
+{ label: "others", y: 22 },
+{ label: "vdevvalws", y: 23 },
+{ label: "vmyadminws", y: 102 },
+{ label: "vmyapiws", y: 25085 },
+{ label: "vmymows", y: 15641 },
+{ label: "vmynetpion.street.my", y: 673 },
+{ label: "vmypayws", y: 118 },
+{ label: "vmypushmsg", y: 2536 },
+{ label: "vmysows", y: 5100 },
+{ label: "webmadeup", y: 649 },
+
+				]
+			}			
+
+			
+			],
+          legend: {
+            cursor:"pointer",
+            itemclick : function(e) {
+              if (typeof(e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+              e.dataSeries.visible = false;
+              }
+              else {
+                e.dataSeries.visible = true;
+              }
+              chart.render();
+            }
+          }
+        });		
+
+				
+chart_1.render();		
+chart_2.render();		
+chart_3.render();		
+chart_4.render();		
+chart_5.render();		
+chart_6.render();		
+chart_7.render();
+}
+</script>
+</head>
+<body>
+	<div id="shahril1" style="height: 400px; width: 100%;"></div><br/>
+	<div id="shahril2" style="height: 400px; width: 100%;"></div><br/>
+	<div id="shahril3" style="height: 400px; width: 100%;"></div><br/>
+	<div id="shahril4" style="height: 400px; width: 100%;"></div><br/>
+	<div id="shahril5" style="height: 400px; width: 100%;"></div><br/>
+	<div id="shahril6" style="height: 400px; width: 100%;"></div><br/>
+	<div id="shahril7" style="height: 400px; width: 100%;"></div><br/>
+</body>
+</html>
+
